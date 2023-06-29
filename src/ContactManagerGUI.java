@@ -54,7 +54,7 @@ public class ContactManagerGUI extends JFrame {
         add(mainPanel);
     }
 
-    private void displayContacts() {
+    public void displayContacts() {
         try {
             File file = new File("friendsContact.txt");
             if (file.exists()) {
@@ -182,15 +182,6 @@ public class ContactManagerGUI extends JFrame {
         }
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                ContactManagerGUI contactManager = new ContactManagerGUI();
-                contactManager.displayContacts();
-                contactManager.setVisible(true);
-            }
-        });
-    }
 }
 
 
